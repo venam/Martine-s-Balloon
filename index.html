@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- <html manifest="myGame.appcache">-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no"/>  
+		<link rel="shortcut icon" href="favicon.ico">
+		<title>Martine Aniv</title>
+		<script src="Media.js"></script>
+		<script src="WeightedRand.js"></script>
+		<script src="Equations.js"></script>
+		<script src="State.js"></script>
+		<script src="Element.js"></script>
+		<script src="Balloon.js"></script>
+		<script src="Cake.js"></script>
+		<script src="PlayingState.js"></script>
+		<script src="MenuState.js"></script>
+		<script src="WinState.js"></script>
+		<script src="RetryState.js"></script>
+		<script src="howler.min.js"></script>
+		<style>
+		@font-face {
+			font-family: "bit";
+			src: url('8bitoperator.ttf');
+		}
+
+		* {
+			-webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+			-webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+			/* make transparent link selection, adjust last value opacity 0 to 1.0 */
+			-webkit-tap-highlight-color: rgba(0,0,0,0); 
+			-webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+			-webkit-tap-highlight-color: rgba(0,0,0,0); 
+		}
+
+		html, body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background: #006685;
+		}
+		#game {
+			transform-origin: 0 0;
+			-webkit-transform-origin: 0 0;
+			user-select: none;
+			-webkit-user-select: none;
+		}
+		#game canvas {
+			image-rendering: crisp-edges;
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -webkit-optimize-contrast;
+			touch-action: none;
+		}
+		*.unselectable {
+			-moz-user-select: -moz-none;
+			-khtml-user-select: none;
+			-webkit-user-select: none;
+			/*
+				Introduced in IE 10.
+				See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+			*/
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		</style>
+		<!--<script src="pointerevents.js"></script>-->
+		<script src="pep.js"></script>
+		</head>
+	<body>
+		<div id="game"  touch-action="none"  unselectable="on" class="unselectable">
+			<canvas id="c0" width="320" height="480" touch-action="none" unselectable="on" class="unselectable">
+				It's 2013, get a next gen browser, <a href="http://www.getfirefox.com">firefox</a> for example, otherwise you won't be able to play this game correctly.
+			</canvas>
+		</div>
+		<div style='display:none;font-family:bit;'>hidden</div>
+	</body>
+	<script src="MainGame.js"></script>
+	<script>
+		document.addEventListener('pointerdown', function(e) { e.preventDefault(); }, false);
+		document.addEventListener('pointermove', function(e) { e.preventDefault(); }, false);
+		document.addEventListener('pointerup', function(e) { e.preventDefault(); }, false);
+	</script>
+</html>
+

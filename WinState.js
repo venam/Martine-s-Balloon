@@ -22,7 +22,7 @@ function WinState(game) {
 
 	this.joyeux = "";
 	this.joyeux_index = 0;
-	this.joyeux_text ="Joyeux Aniversaire Martine!";
+	this.joyeux_text ="Joyeux Anniversaire Martine!";
 }
 
 //inheritance from State
@@ -65,7 +65,7 @@ WinState.prototype.draw = function() {
 	if (this.joyeux.length == this.joyeux_text.length) {
 		this.game.ctx.fillStyle = "#E1AA21";
 		this.game.ctx.font = "10px bit";
-		this.game.ctx.fillText("Tappe 3 fois pour rejouer", 320/2, 420);
+		this.game.ctx.fillText("Tape 3 fois pour rejouer", 320/2, 420);
 	}
 }
 
@@ -135,7 +135,7 @@ WinState.prototype.pUp = function(evt) {
 		this.cake_come_up = false;
 		this.joyeux = "";
 		this.joyeux_index = 0;
-		this.joyeux_text ="Joyeux Aniversaire Martine!";
+		this.joyeux_text ="Joyeux Anniversaire Martine!";
 		this.game.setState(this.game.playingState);
 	}
 }

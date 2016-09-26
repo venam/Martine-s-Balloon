@@ -7,7 +7,7 @@ function PlayingState(game) {
 	this.balloons = new Array();
 	this.initializeBalloons();
 
-	this.constant_text = "tappe les ballons";
+	this.constant_text = "tape les ballons";
 
 	this.popped_balloons = 0;
 
@@ -27,7 +27,7 @@ PlayingState.prototype.reset = function() {
 	this.numberOfBalloons = 7;
 	this.balloons = new Array();
 	this.initializeBalloons();
-	this.constant_text = "tappe les ballons";
+	this.constant_text = "tape les ballons";
 	this.popped_balloons = 0;
 	this.balloon_sleep_counter = 0;
 	this.max_balloon_sleep_counter = 70;
@@ -59,7 +59,7 @@ PlayingState.prototype.draw = function() {
 		this.game.ctx.shadowOffsetX = 15;
 		this.game.ctx.shadowOffsetY = 15;
 
-		var text = "Prepares toi!";
+		var text = "Prépare toi!";
 		this.game.ctx.fillStyle = "#E1AA21";
 		this.game.ctx.font = "30px bit";
 		this.game.ctx.textAlign="center";

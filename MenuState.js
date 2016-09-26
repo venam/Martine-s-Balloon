@@ -27,7 +27,7 @@ MenuState.prototype.draw = function() {
 	this.game.ctx.fillText("ballons", 320/2, 300);
 
 	this.game.ctx.font = "15px bit";
-	this.game.ctx.fillText("Tappe 3 fois pour jouer", 320/2, 400);
+	this.game.ctx.fillText("Tape 3 fois pour jouer", 320/2, 400);
 }
 
 
